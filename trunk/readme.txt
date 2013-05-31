@@ -4,7 +4,7 @@ Tags: media library, custom fields, custom links, gallery, image, media library,
 Requires at least: 3.5
 Tested up to: 3.5.1
 
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 License: GPLv2 or later
 
 
@@ -16,8 +16,10 @@ This plugin is intended for WordPress theme and plugin developers who want to cr
 
 Please note that this plugin isn't suitable for non-developers.
 
+Full documentation at [http://abcfolio.com/help/wordpress-media-library-custom-fields-overview/](http://abcfolio.com/help/wordpress-media-library-custom-fields-overview/).
 
 This plugin adds the following fields to each of the images in WordPress Media Library:
+
 * Custom URL
 * Custom URL Target
 * Caption 2
@@ -29,7 +31,6 @@ The plugin is compatible with WordPress Multisite.
 
 If you’ve ever had a WordPress gallery and needed to link images to other pages but couldn’t, this plugin is for you!
 
-Full documentation at [http://abcfolio.com/help/wordpress-media-library-custom-fields-overview/](http://abcfolio.com/help/wordpress-media-library-custom-fields-overview/).
 
 == Installation ==
 
@@ -43,10 +44,13 @@ Full documentation at [http://abcfolio.com/help/wordpress-media-library-custom-f
 = 1.0.0 =
 * First version.
 
+= 1.0.1 =
+* Fixed readme.txt.
+
 == Translations ==
 
 * English - default, always included
-* German: Polski
+* Polish - Polski
 
 *Note:* Please contribute your language to the plugin to make it even more useful. For translating we recommend the awesome ["Codestyling Localization" plugin](http://wordpress.org/extend/plugins/codestyling-localization/).
 
