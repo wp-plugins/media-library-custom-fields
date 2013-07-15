@@ -3,13 +3,8 @@ Contributors: jasiu
 Tags: media library, custom fields, custom links, gallery, image, media library, gallery link, gallery links, image link, image links
 Requires at least: 3.5
 Tested up to: 3.5.1
-
-Stable tag: 1.0.2
+Stable tag: 1.0.3
 License: GPLv2 or later
-Stable tag: 1.0.2
-License: GPLv2 or later
-Copyright (c) 2013 abcFolio.com (email : abcfolio@live.com)
-
 
 Add custom links and other fields to WordPress images.
 
@@ -49,6 +44,10 @@ We use the additional fields created by this plugin in our plugins:
 
 
 == Changelog ==
+
+= 1.0.3 =
+* Fixed: Text file formatting.
+
 = 1.0.2 =
 * Fixed: Notice - has_cap was called with an argument that is deprecated.
 * Added: Delete plugin options on uninstall.
