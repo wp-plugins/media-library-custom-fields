@@ -1,12 +1,11 @@
 <?php
 /**
- * Uninstall Media Library Custom Fields. Fired when the plugin is uninstalled.
+ * Uninstall plugin. Fired when the plugin is uninstalled.s
  *
- * @package   Media Library Custom Fields
- * @license   GPL-2.0+
- * @copyright 2013 abcFolio.com
- * @since     1.0.0
- */
+ * @package     Media Library Custom Fields
+ * @since       1.0.2
+*/
+
 
 // If uninstall, not called from WordPress, then exit
 if ( ! defined( 'WP_UNINSTALL_PLUGIN' ) ) { exit; }
