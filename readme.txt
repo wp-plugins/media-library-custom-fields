@@ -3,7 +3,7 @@ Contributors: jasiu
 Tags: media library, custom fields, custom links, gallery, image, media library, gallery link, gallery links, image link, image links
 Requires at least: 3.5
 Tested up to: 3.5.1
-Stable tag: 1.0.4
+Stable tag: 1.0.5
 License: GPLv2 or later
 
 Add custom links and other fields to WordPress images.
