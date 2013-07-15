@@ -11,7 +11,7 @@ function abcfmlcf_add_plugin_options_page() {
             do_action('abcfmlcf_hide_plugin_options_page');
         }
     else{
-            add_options_page("Media Library Custom Fields", "Media Library Custom Fields", 1, basename(__FILE__), "abcfmlcf_optns_pg");
+            add_options_page("Media Library Custom Fields", "Media Library Custom Fields", 'manage_options', basename(__FILE__), "abcfmlcf_optns_pg");
         }
 }
 
@@ -92,7 +92,7 @@ function abcfmlcf_optns_pg() {
             );
 
             update_option( 'abcfmlcf_optns', $save_optns ) ;
-            
+
             ?><div class="updated"><p><strong><?php _e('Options saved.'); ?></strong></p></div><?php
     }
 

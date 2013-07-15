@@ -4,8 +4,11 @@ Tags: media library, custom fields, custom links, gallery, image, media library,
 Requires at least: 3.5
 Tested up to: 3.5.1
 
-Stable tag: 1.0.1
+Stable tag: 1.0.2
 License: GPLv2 or later
+Stable tag: 1.0.2
+License: GPLv2 or later
+Copyright (c) 2013 abcFolio.com (email : abcfolio@live.com)
 
 
 Add custom links and other fields to WordPress images.
@@ -13,8 +16,6 @@ Add custom links and other fields to WordPress images.
 == Description ==
 
 This plugin is intended for WordPress theme and plugin developers who want to create a complex image presentations or galleries and require a few additional fields not provided by Media Library.
-
-Please note that this plugin isn't suitable for non-developers.
 
 Full documentation at [http://abcfolio.com/help/wordpress-media-library-custom-fields-overview/](http://abcfolio.com/help/wordpress-media-library-custom-fields-overview/).
 
@@ -31,6 +32,14 @@ The plugin is compatible with WordPress Multisite.
 
 If you’ve ever had a WordPress gallery and needed to link images to other pages but couldn’t, this plugin is for you!
 
+= Working Examples =
+
+We use the additional fields created by this plugin in our plugins:
+
+* [Grid Gallery with Custom Links](http://abcfolio.com/help/grid-gallery-with-custom-links/)
+* [Grid Gallery with Custom Links Pro](http://abcfolio.com/help/wordpress-plugin-grid-gallery-with-custom-links-pro/)
+
+
 
 == Installation ==
 
@@ -40,17 +49,21 @@ If you’ve ever had a WordPress gallery and needed to link images to other page
 
 
 == Changelog ==
+= 1.0.2 =
+* Fixed: Notice - has_cap was called with an argument that is deprecated.
+* Added: Delete plugin options on uninstall.
+
+= 1.0.1 =
+* Fixed readme.txt.
 
 = 1.0.0 =
 * First version.
 
-= 1.0.1 =
-* Fixed readme.txt.
 
 == Translations ==
 
 * English - default, always included
 * Polish - Polski
 
-*Note:* Please contribute your language to the plugin to make it even more useful. For translating we recommend the awesome ["Codestyling Localization" plugin](http://wordpress.org/extend/plugins/codestyling-localization/).
+*Note:* Please contribute your language to the plugin to make it even more useful. For translating, we recommend the awesome ["Codestyling Localization" plugin](http://wordpress.org/extend/plugins/codestyling-localization/).
 
