@@ -3,20 +3,29 @@
  * Plugin Name: Media Library Custom Fields
  * Plugin URI: http://abcfolio.com/help/wordpress-media-library-custom-fields-overview/
  * Description: Add custom URLs and other fields to images in WordPress media library.
- * Author: abcFolio WordPress Themes for Photographers
+ * Author: abcFolio WordPress Plugins
  * Author URI: http://www.abcfolio.com
- * Version: 1.0.5
+ * Version: 1.1.0
  * Text Domain: abcfmlcf-td
  * Domain Path: /languages
- * License:     GPL-2.0+
- * License URI: http://www.gnu.org/licenses/
+ *
+ * Media Library Custom Fields is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 2 of the License, or
+ * any later version.
+ *
+ * Media Library Custom Fields is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with Media Library Custom Fields. If not, see <http://www.gnu.org/licenses/>.
  *
  * @package Media Library Custom Fields
  * @category Core
- * @author abcFolio WordPress Themes for Photographers
- * @license   GPL-2.0+
- * @copyright 2013 abcFolio.com
- * @version 1.0.5
+ * @author abcFolio WordPress Plugins
+ * @version 1.1.0
  */
 
 add_action( 'init', array( 'ABCFMLCF_Media_Lib_Custom_Flds', 'init' ) );
@@ -41,7 +50,6 @@ class ABCFMLCF_Media_Lib_Custom_Flds {
         add_filter( 'attachment_fields_to_save', array( 'ABCFMLCF_Media_Lib_Custom_Flds', 'save_attachment_fields' ), null , 2);
 
     }
-
 
     //Return HTML for all custom fields
     public static function get_attachment_fields( $form_fields, $post ) {
@@ -87,17 +95,7 @@ class ABCFMLCF_Media_Lib_Custom_Flds {
                 </p></td></tr>';
         }
 
-        if(!$optns['set_no']['hide']){
 
-            $lblSetNo = $optns['set_no']['lbl'];
-            if(empty($lblSetNo)){ $lblSetNo = __( 'Set Number', 'abcfmlcf-td' );}
-
-            $set = get_post_meta( $post->ID, '_abcfmlcf_set_no', true );
-            $form_fields['abcfmlcf_set_no']['tr'] = '<tr><td colspan="2" style="width:800px;"><p>
-                <label for="abcfmlcf_set_no"><strong>' . $lblSetNo . '</strong></label><br>
-                <input type="text" value="' . $set . '" id="attachments-' . $post->ID . '-abcfmlcf_set_no" name="attachments[' . $post->ID . '][abcfmlcf_set_no]"  class="widefat" />
-                </p></td></tr>';
-        }
 
         if(!$optns['custom_url']['hide']){
 
@@ -105,7 +103,8 @@ class ABCFMLCF_Media_Lib_Custom_Flds {
             if(empty($lblUrl)){ $lblUrl = __( 'Custom Link URL', 'abcfmlcf-td' );}
 
             $custUrl = get_post_meta( $post->ID, '_abcfmlcf_custom_url', true );
-            $form_fields['abcfmlcf_custom_url']['tr'] = '<tr><td colspan="2"><label for="abcfmlcf_custom_url"><strong>' . $lblUrl . '</strong></label><br>
+            $form_fields['abcfmlcf_custom_url']['tr'] = '<tr><td colspan="2" style="width:800px;">
+                <label for="abcfmlcf_custom_url"><strong>' . $lblUrl . '</strong></label><br>
                     <input type="text" value="' . $custUrl . '" id="attachments-' . $post->ID . '-abcfmlcf_custom_url" name="attachments[' . $post->ID . '][abcfmlcf_custom_url]"  class="widefat" />
                     </td></tr>';
         }
@@ -123,10 +122,34 @@ class ABCFMLCF_Media_Lib_Custom_Flds {
                         </select></td></tr>';
         }
 
+       if(!$optns['onclick_js']['hide']){
+
+            $lblJs = $optns['onclick_js']['lbl'];
+            if(empty($lblJs)){ $lblJs = __( 'JavaScript', 'abcfmlcf-td' );}
+
+            $jsValue = get_post_meta( $post->ID, '_abcfmlcf_onclick_js', true );
+            $form_fields['abcfmlcf_lnk_js']['tr'] = '<tr><td colspan="2" style="width:800px;"><p>
+                <label for="abcfmlcf_lnk_js"><strong>' . $lblJs . '</strong></label><br>
+                <input type="text" value="' . $jsValue . '" id="attachments-' . $post->ID . '-abcfmlcf_lnk_js" name="attachments[' . $post->ID . '][abcfmlcf_lnk_js]"  class="widefat" />
+                </p></td></tr>';
+        }
+
+        if(!$optns['set_no']['hide']){
+
+            $lblSetNo = $optns['set_no']['lbl'];
+            if(empty($lblSetNo)){ $lblSetNo = __( 'Set Number', 'abcfmlcf-td' );}
+
+            $set = get_post_meta( $post->ID, '_abcfmlcf_set_no', true );
+            $form_fields['abcfmlcf_set_no']['tr'] = '<tr><td colspan="2" style="width:800px;"><p>
+                <label for="abcfmlcf_set_no"><strong>' . $lblSetNo . '</strong></label><br>
+                <input type="text" value="' . $set . '" id="attachments-' . $post->ID . '-abcfmlcf_set_no" name="attachments[' . $post->ID . '][abcfmlcf_set_no]"  class="widefat" />
+                </p></td></tr>';
+        }
+
         return $form_fields;
     }
 
-    //Save custom fields data
+    //Save custom fields data esc_textarea
     public static function save_attachment_fields( $post, $attachment ) {
 
         if( isset( $attachment['abcfmlcf_caption2'] ) ) {
@@ -146,6 +169,9 @@ class ABCFMLCF_Media_Lib_Custom_Flds {
         }
         if( isset( $attachment['abcfmlcf_custom_url_target'] ) ) {
                 update_post_meta( $post['ID'], '_abcfmlcf_custom_url_target', $attachment['abcfmlcf_custom_url_target'] );
+        }
+        if( isset( $attachment['abcfmlcf_lnk_js'] ) ) {
+                update_post_meta( $post['ID'], '_abcfmlcf_onclick_js', $attachment['abcfmlcf_lnk_js'] );
         }
         return $post;
     }

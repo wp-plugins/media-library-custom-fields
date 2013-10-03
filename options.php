@@ -38,6 +38,7 @@ function abcfmlcf_optns_pg() {
             $custom_url_l = '';
             $custom_url_target_l = '';
             $set_no_l = '';
+            $onclick_js_l = '';
 
             $_POST['abcfmlcf_cap2_h'] = (isset($_POST['abcfmlcf_cap2_h'])) ? 1 : 0;
             $cap2_h = $_POST['abcfmlcf_cap2_h'];
@@ -62,6 +63,10 @@ function abcfmlcf_optns_pg() {
             $_POST['abcfmlcf_set_no_h'] = (isset($_POST['abcfmlcf_set_no_h'])) ? 1 : 0;
             $set_no_h = $_POST['abcfmlcf_set_no_h'];
             if(!$set_no_h) { $set_no_l = esc_attr($_POST['abcfmlcf_set_no_l']); }
+
+            $_POST['abcfmlcf_onclick_js_h'] = (isset($_POST['abcfmlcf_onclick_js_h'])) ? 1 : 0;
+            $onclick_js_h = $_POST['abcfmlcf_onclick_js_h'];
+            if(!$onclick_js_h) { $onclick_js_l = esc_attr($_POST['abcfmlcf_onclick_js_l']); }
 
 
             $save_optns = array(
@@ -88,6 +93,10 @@ function abcfmlcf_optns_pg() {
                 'set_no' => array(
                     'hide' => $set_no_h,
                     'lbl' => $set_no_l
+                ),
+                'onclick_js' => array(
+                    'hide' => $onclick_js_h,
+                    'lbl' => $onclick_js_l
                 )
             );
 
@@ -114,13 +123,14 @@ function abcfmlcf_optns_pg() {
     <div class="wrap">
     <div id="icon-options-general" class="icon32"><br></div>
     <?php    echo "<h2>" . __( 'Media Library Custom Fields', 'abcfmlcf-td' ) . "</h2>";
-    echo "<h4>" . __( 'Custom options. You can hide fields or customize field labels.', 'abcfmlcf-td' ) . "</h4>";
+    echo '<div style="margin-top:.5em;">' . __( 'Documentation & Tutorials: ', 'abcfmlcf-td' ) . '<a target="_blank" href=" http://abcfolio.com/help/wordpress-media-library-custom-fields-overview/."> http://abcfolio.com/help/wordpress-media-library-custom-fields-overview/.</a></div>';
+    echo '<h3 style="margin-bottom:.05em;margin-top:2em;">' . __( 'Custom options. You can hide fields or customize field labels.', 'abcfmlcf-td' ) . '</h3>';
     ?>
 
     <form name="abcfmlcf-tdform" method="post" action="<?php echo str_replace( '%7E', '~', $_SERVER['REQUEST_URI']); ?>">
         <input type="hidden" name="abcfmlcf_update_optns" value="Y">
 
-<table class="form-table" style="width:500px;">
+<table class="form-table" style="width:500px; margin-top:0;">
     <tbody>
         <?php
         $capC = __( 'Caption ', 'abcfmlcf-td' );
@@ -128,9 +138,11 @@ function abcfmlcf_optns_pg() {
         $capUrl = __( 'Custom URL', 'abcfmlcf-td' );
         $capUrlT = __( 'Custom URL Target', 'abcfmlcf-td' );
         $set = __( 'Set Number', 'abcfmlcf-td' );
+        $onclickLbl = __( 'onclick JavaScript', 'abcfmlcf-td' );
         $lblHide = __( ' Hide', 'abcfmlcf-td' );
         $n = 'abcfmlcf_';
 
+        echo abcfmlcf_tr_hdivider2();
         echo abcfmlcf_tr_lbl($capC . '2 - ' . $capL, $optns['cap2']['lbl'], '', $n . 'cap2_l');
         echo abcfmlcf_tr_chk($capC . '2', $optns['cap2']['hide'], '', $n . 'cap2_h', $lblHide);
         echo abcfmlcf_tr_hdivider();
@@ -154,6 +166,11 @@ function abcfmlcf_optns_pg() {
         echo abcfmlcf_tr_lbl($set . ' - ' . $capL, $optns['set_no']['lbl'], '', $n . 'set_no_l');
         echo abcfmlcf_tr_chk($set, $optns['set_no']['hide'], '', $n . 'set_no_h', $lblHide);
         echo abcfmlcf_tr_hdivider();
+
+        echo abcfmlcf_tr_lbl($onclickLbl . ' - ' . $capL, $optns['onclick_js']['lbl'], '', $n . 'onclick_js_l');
+        echo abcfmlcf_tr_chk($onclickLbl, $optns['onclick_js']['hide'], '', $n . 'onclick_js_h', $lblHide);
+        echo abcfmlcf_tr_hdivider2();
+
         ?>
     </tbody>
 </table>
@@ -170,7 +187,6 @@ function abcfmlcf_optns_pg() {
         <input class="button button-primary" type="submit" name="abcfmlcf-reset" value="<?php _e('Reset Options', 'abcfmlcf-td' ) ?>" />
     </p>
  </form>
-
 </div><?php
 }
 
@@ -178,8 +194,23 @@ function abcfmlcf_optns_pg() {
 //Merge default and custom options.
 function abcfmlcf_get_plugin_options() {
 
+    //$x = get_option( 'abcfmlcf_optns', array() );
+     //delete_option('abcfmlcf_optns');
+     //$x = get_option( 'abcfmlcf_optns', array() );
+
+//print '<pre>';
+//var_dump($x);
+//print '</pre>';
+//die;
+
     $optns = array_merge(abcfmlcf_default_optns(), get_option( 'abcfmlcf_optns', array() ));
     if(has_filter('abcfmlcf_plugin_options')) {  $optns = apply_filters('abcfmlcf_plugin_options', $optns); }
+
+//print '<pre>';
+//var_dump($optns);
+//print '</pre>';
+//die;
+
 
     return wp_parse_args($optns);
 }
@@ -193,11 +224,11 @@ function abcfmlcf_default_optns(){
                 'lbl' => ''
             ),
             'cap3' => array(
-                'hide' => false,
+                'hide' => true,
                 'lbl' => ''
             ),
             'cap4' => array(
-                'hide' => false,
+                'hide' => true,
                 'lbl' => ''
             ),
             'custom_url' => array(
@@ -209,7 +240,11 @@ function abcfmlcf_default_optns(){
                 'lbl' => ''
             ),
             'set_no' => array(
-                'hide' => false,
+                'hide' => true,
+                'lbl' => ''
+            ),
+            'onclick_js' => array(
+                'hide' => true,
                 'lbl' => ''
             )
         );
@@ -218,6 +253,10 @@ function abcfmlcf_default_optns(){
 //HTML. Horizontal line.
 function abcfmlcf_tr_hdivider(){
   return '<tr valign="top"><td colspan="2"><div style="border-top-style: solid; border-width: 1px; border-color: #999999; width: 500px;"></div></td></tr>';
+}
+
+function abcfmlcf_tr_hdivider2(){
+  return '<tr valign="top"><td colspan="2"><div style="border-top-style: solid; border-width: 2px; border-color: #999999; width: 500px;"></div></td></tr>';
 }
 
 //HTML. Label.

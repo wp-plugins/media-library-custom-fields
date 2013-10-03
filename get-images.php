@@ -63,8 +63,10 @@ function abcfmlcf_get_images( $attr ){
             $item['cap2'] = wptexturize(get_post_meta($attachment->ID, '_abcfmlcf_caption2', true));
             $item['cap3'] = wptexturize(get_post_meta($attachment->ID, '_abcfmlcf_caption3', true));
             $item['cap4'] = wptexturize(get_post_meta($attachment->ID, '_abcfmlcf_caption4', true));
+            $item['setNo'] = wptexturize(get_post_meta($attachment->ID, '_abcfmlcf_set_no', true));
             $item['imgID'] = $attachment->ID;
-
+            //$item['onclickJS'] = 'cabcdefgh';
+            $item['onclickJS'] = get_post_meta($attachment->ID, '_abcfmlcf_onclick_js', true);
             $items[] = $item;
          }
     }

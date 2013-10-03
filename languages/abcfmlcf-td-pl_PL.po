@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Media Library Custom Fields v1.0.0\n"
+"Project-Id-Version: Media Library Custom Fields v1.1.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2013-05-30 11:59:19+0000\n"
+"PO-Revision-Date: 2013-10-03 15:57:40+0000\n"
 "Last-Translator: admin <voyteks@hotmail.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -22,7 +22,7 @@ msgstr ""
 
 #. translators: plugin header field 'Name'
 #: media-library-custom-fields.php:0
-#: options.php:116
+#: options.php:125
 #@ abcfmlcf-td
 msgid "Media Library Custom Fields"
 msgstr "Biblioteka mediów - dodatkowe pola"
@@ -39,29 +39,23 @@ msgstr ""
 msgid "http://www.abcfolio.com"
 msgstr ""
 
-#. translators: plugin header field 'Version'
-#: media-library-custom-fields.php:0
-#@ abcfmlcf-td
-msgid "1.0.0"
-msgstr ""
-
-#: media-library-custom-fields.php:51
+#: media-library-custom-fields.php:59
 #@ abcfmlcf-td
 msgid "Caption"
 msgstr "Etykieta"
 
-#: media-library-custom-fields.php:93
-#: options.php:130
+#: media-library-custom-fields.php:140
+#: options.php:140
 #@ abcfmlcf-td
 msgid "Set Number"
 msgstr "Numer Zestawu"
 
-#: media-library-custom-fields.php:105
+#: media-library-custom-fields.php:103
 #@ abcfmlcf-td
 msgid "Custom Link URL"
 msgstr "Własny odnośnik URL"
 
-#: media-library-custom-fields.php:116
+#: media-library-custom-fields.php:115
 #@ abcfmlcf-td
 msgid "Custom Link Target"
 msgstr "Własnego odnośnika cel"
@@ -71,43 +65,43 @@ msgstr "Własnego odnośnika cel"
 msgid "You do not have sufficient permissions to edit this site."
 msgstr ""
 
-#: options.php:96
-#: options.php:109
+#: options.php:105
+#: options.php:118
 #@ default
 msgid "Options saved."
 msgstr ""
 
-#: options.php:117
+#: options.php:127
 #@ abcfmlcf-td
 msgid "Custom options. You can hide fields or customize field labels."
 msgstr "Własne ustawienia. Możesz ukryć pola lub zmienić nazwy nalkejek."
 
-#: options.php:126
+#: options.php:136
 #@ abcfmlcf-td
 msgid "Caption "
 msgstr "Etykieta"
 
-#: options.php:127
+#: options.php:137
 #@ abcfmlcf-td
 msgid "Label"
 msgstr "Etykieta"
 
-#: options.php:128
+#: options.php:138
 #@ abcfmlcf-td
 msgid "Custom URL"
 msgstr "Własny odnośnik URL"
 
-#: options.php:129
+#: options.php:139
 #@ abcfmlcf-td
 msgid "Custom URL Target"
 msgstr "Cel własnego odnośnika"
 
-#: options.php:131
+#: options.php:142
 #@ abcfmlcf-td
 msgid " Hide"
 msgstr "Ukryj"
 
-#: options.php:163
+#: options.php:180
 #@ abcfmlcf-td
 msgid "Update Options"
 msgstr "Zapisz opcje"
@@ -118,24 +112,45 @@ msgstr "Zapisz opcje"
 msgid "Add custom URLs and other fields to images in WordPress media library."
 msgstr "Dodaj własne pola do obrazków w biblotece mediów WordPress."
 
-#: options.php:170
+#: options.php:187
 #@ abcfmlcf-td
 msgid "Reset Options"
 msgstr "Wyczyść opcje"
 
-#. translators: plugin header field 'Author'
-#: media-library-custom-fields.php:0
-#@ abcfmlcf-td
-msgid "abcFolio WordPress Themes for Photographers"
-msgstr "abcFolio WordPress motywy dla fotografów"
-
-#: media-library-custom-fields.php:121
+#: media-library-custom-fields.php:120
 #@ abcfmlcf-td
 msgid "Same Window"
 msgstr "Te same okno"
 
-#: media-library-custom-fields.php:122
+#: media-library-custom-fields.php:121
 #@ abcfmlcf-td
 msgid "New Window or Tab"
 msgstr "Nowe okno lub karta"
+
+#. translators: plugin header field 'Author'
+#: media-library-custom-fields.php:0
+#@ abcfmlcf-td
+msgid "abcFolio WordPress Plugins"
+msgstr "abcFolio Wtyczki do WordPress "
+
+#. translators: plugin header field 'Version'
+#: media-library-custom-fields.php:0
+#@ abcfmlcf-td
+msgid "1.1.0"
+msgstr "1.1.0"
+
+#: media-library-custom-fields.php:128
+#@ abcfmlcf-td
+msgid "JavaScript"
+msgstr "JavaScript"
+
+#: options.php:126
+#@ abcfmlcf-td
+msgid "Documentation & Tutorials: "
+msgstr "Dokumentacja i samouczki:"
+
+#: options.php:141
+#@ abcfmlcf-td
+msgid "onclick JavaScript"
+msgstr "onclick JavaScript"
 
