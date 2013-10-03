@@ -5,7 +5,7 @@ Contributors: jasiu
 Tags: media library, custom fields, custom links, gallery, image, gallery link, gallery links, image link, image links, abcfolio, photos
 Requires at least: 3.5
 Tested up to: 3.6
-Stable tag: 1.1.0
+Stable tag: 1.1.1
 License: GPLv2 or later
 
 Add custom links and other fields to WordPress Gallery images.
