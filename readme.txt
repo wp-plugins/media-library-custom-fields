@@ -1,11 +1,11 @@
 === Media Library Custom Fields ===
 Author URI: http://www.abcfolio.com
-Plugin URI: http://abcfolio.com/help/wordpress-media-library-custom-fields-overview/
+Plugin URI: http://abcfolio.com/help/wordpress-media-library-custom-fields/
 Contributors: jasiu
 Tags: media library, custom fields, custom links, gallery, image, gallery link, gallery links, image link, image links, abcfolio, photos
 Requires at least: 3.5
-Tested up to: 3.6
-Stable tag: 1.1.2
+Tested up to: 3.8
+Stable tag: 1.1.3
 License: GPLv2 or later
 
 Add custom links and other fields to WordPress Gallery images.
@@ -14,7 +14,7 @@ Add custom links and other fields to WordPress Gallery images.
 
 This plugin is intended for WordPress theme and plugin developers who want to create a complex image presentations or galleries and require a few additional fields not provided by Media Library.
 
-Full documentation at [http://abcfolio.com/help/wordpress-media-library-custom-fields-overview/](http://abcfolio.com/help/wordpress-media-library-custom-fields-overview/).
+Full documentation at [http://abcfolio.com/help/wordpress-media-library-custom-fields/](http://abcfolio.com/help/wordpress-media-library-custom-fields/).
 
 This plugin adds the following fields to each of the images in WordPress Media Library:
 
@@ -32,9 +32,6 @@ If you’ve ever had a WordPress gallery and needed to link images to other page
 
 = Working Examples =
 
-We use the additional fields created by this plugin in our plugins:
-
-* [Grid Gallery with Custom Links](http://abcfolio.com/help/grid-gallery-with-custom-links/)
 * [Grid Gallery with Custom Links Pro](http://abcfolio.com/help/wordpress-plugin-grid-gallery-with-custom-links-pro/)
 
 == Installation ==
@@ -44,6 +41,9 @@ We use the additional fields created by this plugin in our plugins:
 1. Go to Settings > Media Library Custom Fields to add custom options (optional).
 
 == Changelog ==
+
+= 1.1.3 =
+* Changes: Updated custom options screen.
 
 = 1.1.2 =
 * Added: New field onclick JavaScript.

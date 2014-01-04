@@ -50,6 +50,7 @@ function abcfmlcf_get_images( $attr ){
     //Return images data
     foreach ( $attachments as $attachment ) {
         $imgSrc = wp_get_attachment_image_src( $attachment->ID, $size, false );
+
         if(!empty($imgSrc)){
             $item['imgUrl'] = $imgSrc[0];
             $item['w'] = $imgSrc[1];
@@ -65,7 +66,6 @@ function abcfmlcf_get_images( $attr ){
             $item['cap4'] = wptexturize(get_post_meta($attachment->ID, '_abcfmlcf_caption4', true));
             $item['setNo'] = wptexturize(get_post_meta($attachment->ID, '_abcfmlcf_set_no', true));
             $item['imgID'] = $attachment->ID;
-            //$item['onclickJS'] = 'cabcdefgh';
             $item['onclickJS'] = get_post_meta($attachment->ID, '_abcfmlcf_onclick_js', true);
             $items[] = $item;
          }

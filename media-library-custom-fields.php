@@ -1,11 +1,11 @@
 <?php
 /**
  * Plugin Name: Media Library Custom Fields
- * Plugin URI: http://abcfolio.com/help/wordpress-media-library-custom-fields-overview/
+ * Plugin URI: http://abcfolio.com/help/wordpress-media-library-custom-fields/
  * Description: Add custom URLs and other fields to images in WordPress media library.
  * Author: abcFolio WordPress Plugins
  * Author URI: http://www.abcfolio.com
- * Version: 1.1.2
+ * Version: 1.1.3
  * Text Domain: abcfmlcf-td
  * Domain Path: /languages
  *
@@ -25,7 +25,7 @@
  * @package Media Library Custom Fields
  * @category Core
  * @author abcFolio WordPress Plugins
- * @version 1.1.2
+ * @version 1.1.3
  */
 
 add_action( 'init', array( 'ABCFMLCF_Media_Lib_Custom_Flds', 'init' ) );

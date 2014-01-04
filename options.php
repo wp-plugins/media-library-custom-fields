@@ -124,7 +124,7 @@ function abcfmlcf_optns_pg() {
     <div id="icon-options-general" class="icon32"><br></div>
     <?php    echo "<h2>" . __( 'Media Library Custom Fields', 'abcfmlcf-td' ) . "</h2>";
     echo '<div style="margin-top:.5em;">' . __( 'Documentation & Tutorials: ', 'abcfmlcf-td' ) . '<a target="_blank" href=" http://abcfolio.com/help/wordpress-media-library-custom-fields-overview/."> http://abcfolio.com/help/wordpress-media-library-custom-fields-overview/.</a></div>';
-    echo '<h3 style="margin-bottom:.05em;margin-top:2em;">' . __( 'Custom options. You can hide fields or customize field labels.', 'abcfmlcf-td' ) . '</h3>';
+    echo '<h3 style="margin-bottom:.05em;margin-top:2em;">' . __( 'Options. Hide fields or customize field labels.', 'abcfmlcf-td' ) . '</h3>';
     ?>
 
     <form name="abcfmlcf-tdform" method="post" action="<?php echo str_replace( '%7E', '~', $_SERVER['REQUEST_URI']); ?>">
@@ -136,7 +136,7 @@ function abcfmlcf_optns_pg() {
         $capC = __( 'Caption ', 'abcfmlcf-td' );
         $capL = __( 'Label', 'abcfmlcf-td' );
         $capUrl = __( 'Custom URL', 'abcfmlcf-td' );
-        $capUrlT = __( 'Custom URL Target', 'abcfmlcf-td' );
+        $capUrlT = __( 'URL Target', 'abcfmlcf-td' );
         $set = __( 'Set Number', 'abcfmlcf-td' );
         $onclickLbl = __( 'onclick JavaScript', 'abcfmlcf-td' );
         $lblHide = __( ' Hide', 'abcfmlcf-td' );
@@ -252,7 +252,7 @@ function abcfmlcf_default_optns(){
 
 //HTML. Horizontal line.
 function abcfmlcf_tr_hdivider(){
-  return '<tr valign="top"><td colspan="2"><div style="border-top-style: solid; border-width: 1px; border-color: #999999; width: 500px;"></div></td></tr>';
+  return '<tr valign="top"><td colspan="2"><div style="border-top-style: solid; border-width: 2px; border-color: #999999; width: 500px;"></div></td></tr>';
 }
 
 function abcfmlcf_tr_hdivider2(){
