@@ -5,7 +5,7 @@
  * Description: Add custom URLs and other fields to images in WordPress media library.
  * Author: abcFolio WordPress Plugins
  * Author URI: http://www.abcfolio.com
- * Version: 1.1.4
+ * Version: 1.1.5
  * Text Domain: abcfmlcf-td
  * Domain Path: /languages
  *
