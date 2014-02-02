@@ -5,7 +5,7 @@
  * Description: Add custom URLs and other fields to images in WordPress media library.
  * Author: abcFolio WordPress Plugins
  * Author URI: http://www.abcfolio.com
- * Version: 1.1.3
+ * Version: 1.1.4
  * Text Domain: abcfmlcf-td
  * Domain Path: /languages
  *
@@ -22,10 +22,6 @@
  * You should have received a copy of the GNU General Public License
  * along with Media Library Custom Fields. If not, see <http://www.gnu.org/licenses/>.
  *
- * @package Media Library Custom Fields
- * @category Core
- * @author abcFolio WordPress Plugins
- * @version 1.1.3
  */
 
 add_action( 'init', array( 'ABCFMLCF_Media_Lib_Custom_Flds', 'init' ) );
