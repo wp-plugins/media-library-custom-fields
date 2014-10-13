@@ -5,7 +5,7 @@
  * Description: Add custom URLs and other fields to images in WordPress media library.
  * Author: abcFolio WordPress Plugins
  * Author URI: http://www.abcfolio.com
- * Version: 1.1.5
+ * Version: 1.1.6
  * Text Domain: abcfmlcf-td
  * Domain Path: /languages
  *
@@ -161,8 +161,14 @@ class ABCFMLCF_Media_Lib_Custom_Flds {
                 update_post_meta( $post['ID'], '_abcfmlcf_set_no', $attachment['abcfmlcf_set_no'] );
         }
         if( isset( $attachment['abcfmlcf_custom_url'] ) ) {
-                update_post_meta( $post['ID'], '_abcfmlcf_custom_url', $attachment['abcfmlcf_custom_url'] );
+                update_post_meta( $post['ID'], '_abcfmlcf_custom_url', htmlspecialchars($attachment['abcfmlcf_custom_url']) );
         }
+
+//        if( isset( $attachment['abcfmlcf_custom_url'] ) ) {
+//                update_post_meta( $post['ID'], '_abcfmlcf_custom_url', $attachment['abcfmlcf_custom_url'] );
+//        }
+
+
         if( isset( $attachment['abcfmlcf_custom_url_target'] ) ) {
                 update_post_meta( $post['ID'], '_abcfmlcf_custom_url_target', $attachment['abcfmlcf_custom_url_target'] );
         }
