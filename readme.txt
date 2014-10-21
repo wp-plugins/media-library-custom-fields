@@ -28,7 +28,7 @@ This plugin adds the following fields to each of the images in WordPress Media L
 
 The plugin is compatible with WordPress Multisite.
 
-If you’ve ever had a WordPress gallery and needed to link images to other pages but couldn’t, this plugin is for you!
+Please note that this plugin isn't suitable for non-developers. To use custom fields you need to build your own custom plugin.
 
 = Working Examples =
 
