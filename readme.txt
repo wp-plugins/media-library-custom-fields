@@ -14,6 +14,8 @@ Add custom links and other fields to WordPress Gallery images.
 
 This plugin is intended for WordPress theme and plugin developers who want to create a complex image presentations or galleries and require a few additional fields not provided by Media Library.
 
+Please note that this plugin isn't suitable for non-developers. To use custom fields you need to build your own custom plugin.
+
 Full documentation at [http://abcfolio.com/help/wordpress-media-library-custom-fields/](http://abcfolio.com/help/wordpress-media-library-custom-fields/).
 
 This plugin adds the following fields to each of the images in WordPress Media Library:
@@ -28,7 +30,6 @@ This plugin adds the following fields to each of the images in WordPress Media L
 
 The plugin is compatible with WordPress Multisite.
 
-Please note that this plugin isn't suitable for non-developers. To use custom fields you need to build your own custom plugin.
 
 = Working Examples =
 
