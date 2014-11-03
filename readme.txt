@@ -16,6 +16,8 @@ This plugin is intended for WordPress theme and plugin developers who want to cr
 
 Please note that this plugin isn't suitable for non-developers. To use custom fields you need to build your own custom plugin.
 
+Media Library Custom Fields is used by our free plugin [Grid Gallery with Custom Links](http://abcfolio.com/help/grid-gallery-with-custom-links/)
+
 Full documentation at [http://abcfolio.com/help/wordpress-media-library-custom-fields/](http://abcfolio.com/help/wordpress-media-library-custom-fields/).
 
 This plugin adds the following fields to each of the images in WordPress Media Library:
@@ -44,7 +46,7 @@ The plugin is compatible with WordPress Multisite.
 == Changelog ==
 
 = 1.1.6 20141013 =
-* Update: Tested compatibility with WordPress 4.0.
+* Update: Compatible with WordPress 4.0.
 
 = 1.1.5 =
 * Changes: None. Fixing file versions in repository.
