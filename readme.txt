@@ -12,7 +12,7 @@ Add custom links and other fields to WordPress Gallery images.
 
 == Description ==
 
-This plugin is intended for WordPress theme and plugin developers who want to create a complex image presentations or galleries and require a few additional fields not provided by Media Library.
+This plugin is intended for WordPress theme and plugin developers who want to create image galleries and require a few additional fields not provided by Media Library.
 
 Please note that this plugin isn't suitable for non-developers. To use custom fields you need to build your own custom plugin.
 
