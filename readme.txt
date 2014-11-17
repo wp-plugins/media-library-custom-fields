@@ -17,6 +17,7 @@ This plugin is intended for WordPress theme and plugin developers who want to cr
 Please note that this plugin isn't suitable for non-developers. To use custom fields you need to build your own custom plugin.
 
 Media Library Custom Fields is used by our free plugin [Grid Gallery with Custom Links](http://abcfolio.com/help/grid-gallery-with-custom-links/)
+and premium plugin [Grid Gallery with Custom Links Pro](http://abcfolio.com/help/wordpress-plugin-grid-gallery-with-custom-links-pro/).
 
 Full documentation at [http://abcfolio.com/help/wordpress-media-library-custom-fields/](http://abcfolio.com/help/wordpress-media-library-custom-fields/).
 
