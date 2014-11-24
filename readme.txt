@@ -31,8 +31,6 @@ This plugin adds the following fields to each of the images in WordPress Media L
 * Set Number
 * onclick JavaScript
 
-The plugin is compatible with WordPress Multisite.
-
 
 = Working Examples =
 
