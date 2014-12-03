@@ -8,7 +8,7 @@ Tested up to: 4.0
 Stable tag: 1.1.6
 License: GPLv2 or later
 
-Add custom links and other fields to WordPress Gallery images.
+Add custom links and other custom fields to WordPress Gallery images.
 
 == Description ==
 
