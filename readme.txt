@@ -4,8 +4,8 @@ Plugin URI: http://abcfolio.com/help/wordpress-media-library-custom-fields/
 Contributors: jasiu
 Tags: media library, custom fields, custom links, gallery, image, gallery link, gallery links, image link, image links, abcfolio, photos
 Requires at least: 3.5
-Tested up to: 4.0
-Stable tag: 1.1.6
+Tested up to: 4.1.1
+Stable tag: 1.1.7
 License: GPLv2 or later
 
 Add custom links and other custom fields to WordPress Gallery images.
@@ -43,6 +43,9 @@ This plugin adds the following fields to each of the images in WordPress Media L
 1. Go to Settings > Media Library Custom Fields to add custom options (optional).
 
 == Changelog ==
+
+= 1.1.7 20150407 =
+* Update: Tested with WordPress 4.1.1.
 
 = 1.1.6 20141013 =
 * Update: Compatible with WordPress 4.0.
